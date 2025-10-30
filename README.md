@@ -1,4 +1,4 @@
-# 🌕 Pinoctober Portal
+# 🌕 mini full-stack
 
 A **mini full-stack web application** built with **React (Vite)** for the frontend and **Node.js + Express.js** for the backend.
 
