@@ -1,0 +1,119 @@
+/* src/index.css - global styles for the mini site */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root{
+  --bg: #f7fafc;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #6b46c1; /* purple */
+  --accent-dark: #553c9a;
+  --success: #10b981;
+}
+
+*{ box-sizing: border-box; margin:0; padding:0; }
+html,body,#root{ height:100%; }
+body{
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--bg), #eef2ff 80%);
+  color: #111827;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.4;
+}
+
+/* Layout helpers */
+.container{
+  max-width: 960px;
+  margin: 36px auto;
+  padding: 0 16px;
+}
+
+/* Card */
+.card{
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(16,24,40,0.06);
+  padding: 20px;
+}
+
+/* Navbar */
+.nav {
+  display:flex;
+  gap:12px;
+  align-items:center;
+  padding:12px 16px;
+  background: transparent;
+  margin-bottom: 18px;
+}
+.nav .brand {
+  font-weight:700;
+  color: var(--accent-dark);
+  margin-right:auto;
+  font-size:1.05rem;
+}
+.nav a {
+  color: var(--accent-dark);
+  padding:8px 10px;
+  border-radius:8px;
+  font-weight:600;
+}
+.nav a:hover {
+  background: rgba(107,70,193,0.08);
+}
+
+/* Forms */
+.form {
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  width:100%;
+}
+.input {
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid #e6e9ee;
+  background: #fbfdff;
+  outline:none;
+}
+.input:focus{
+  border-color: var(--accent);
+  box-shadow: 0 4px 18px rgba(107,70,193,0.08);
+}
+.btn {
+  padding:10px 12px;
+  border-radius:10px;
+  background: var(--accent);
+  color:white;
+  font-weight:600;
+  border:none;
+  cursor:pointer;
+}
+.btn.secondary {
+  background: transparent;
+  border:1px solid #e6e9ee;
+  color: #374151;
+}
+
+/* Dashboard */
+.header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:16px;
+}
+.role-pill {
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:0.85rem;
+  font-weight:600;
+  background: rgba(16,185,129,0.12);
+  color: var(--success);
+}
+
+/* Small responsive */
+@media (max-width:640px){
+  .container{ padding: 0 12px; }
+  .nav{ gap:8px; padding:10px; }
+}
